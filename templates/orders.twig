@@ -1,30 +1,32 @@
 {% extends 'base.twig' %}
 {% block title %}Orders List{% endblock %}
 {% block content %}
-    <a href="{{ asset_url('create_order') }}">Create Order</a>
-    <h1>Orders List</h1>
-    <table class="table">
-        <thead>
-        <tr>
-            <th scope="col">Name</th>
-            <th scope="col">Address</th>
-            <th scope="col">Phone</th>
-            <th scope="col">Product</th>
-            <th scope="col">Price</th>
-            <th scope="col">Date</th>
-        </tr>
-        </thead>
-        <tbody>
-        {% for order in orders %}
+    <div class="col-12">
+        <a href="{{ asset_url('create_order') }}">Create Order</a>
+        <h1>Orders List</h1>
+        <table class="table">
+            <thead>
             <tr>
-                <th scope="row">{{ order.name }}</th>
-                <td>{{ order.address }}</td>
-                <td>{{ order.phone }}</td>
-                <td>{{ order.title }}</td>
-                <td>{{ order.price }}</td>
-                <td>{{ order.create_at }}</td>
+                <th scope="col">Name</th>
+                <th scope="col">Address</th>
+                <th scope="col">Phone</th>
+                <th scope="col">Product</th>
+                <th scope="col">Price</th>
+                <th scope="col">Date</th>
             </tr>
-        {% endfor %}
-        </tbody>
-    </table>
+            </thead>
+            <tbody>
+            {% for order in orders %}
+                <tr>
+                    <th scope="row">{{ order.name }}</th>
+                    <td>{{ order.address }}</td>
+                    <td>{{ order.phone }}</td>
+                    <td>{{ order.title }}</td>
+                    <td>{{ order.price }}</td>
+                    <td>{{ order.create_at }}</td>
+                </tr>
+            {% endfor %}
+            </tbody>
+        </table>
+    </div>
 {% endblock %}
