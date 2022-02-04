@@ -15,7 +15,7 @@ CREATE TABLE orders (
     name varchar(255) NOT NULL,
     address varchar(255) NOT NULL,
     phone varchar(11) DEFAULT NULL,
-    at_create TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
+    create_at TIMESTAMP DEFAULT CURRENT_TIMESTAMP,
     product_id int,
     FOREIGN KEY (product_id)  REFERENCES products(id),
     PRIMARY KEY (id)

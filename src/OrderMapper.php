@@ -16,7 +16,7 @@ class OrderMapper
 
     public function getAll(): array
     {
-        $sql = 'SELECT orders.*, products.* FROM orders INNER JOIN products ON product_id = products.id ORDER BY at_create DESC';
+        $sql = 'SELECT orders.*, products.* FROM orders INNER JOIN products ON product_id = products.id ORDER BY create_at DESC';
         $statement = $this->connection->prepare($sql);
         $statement->execute();
         return $statement->fetchAll();
