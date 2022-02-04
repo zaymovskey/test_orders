@@ -12,7 +12,7 @@ class AddOrderController
 {
     private OrderMapper $orderMapper;
 
-    public function __construct(OrderMapper $orderMapper )
+    public function __construct(OrderMapper $orderMapper)
     {
         $this->orderMapper = $orderMapper;
     }
